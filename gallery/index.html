@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>相册 - Hey，Kegongteng</title>
+<meta name="ThemeName" content="Gridea Theme Rocky by EryouHao" />
+<meta name="referrer" content="always" />
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="mask-icon" href="/safari-pinned-tab.svg">
+<!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet preload" as="style"> -->
+<link href="/media/css/remixicon.css" rel="stylesheet" as="font">
+<link rel="stylesheet" href="/media/css/tailwind.css">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="相册 - Hey，Kegongteng - Atom Feed" href="/atom.xml">
+  
+
+    
+  <meta name="description" content="相册" />
+  <link rel="stylesheet" href="https://hey.kegongteng.cn/media/css/gallery.css">
+  <link rel="canonical" href="https://hey.kegongteng.cn/gallery/" />
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-20 h-20 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-circle-fill text-2xl" v-show="showMenu"></i>
+      <i class="ri-menu-line text-2xl" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/link" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        友链
+      </a>
+    
+      <a href="/container" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        集装箱
+      </a>
+    
+      <a href="/contributors" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        贡献者
+      </a>
+    
+      <a href="/gallery" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        相册
+      </a>
+    
+      <a href="/message" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        留言板
+      </a>
+    
+   <!--<a href="https://hey.kegongteng.cn/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>-->
+  </nav>
+</div>
+    <a href="https://hey.kegongteng.cn"
+      class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Hey，Kegongteng
+    </a>
+    <div class="max-w-5xl w-full mx-auto">
+      <div
+        class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-32 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">相册</h1>
+
+        <!-- jumbotron -->
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-camera-line"></i> 光影一瞬，留下记忆的片段</p>
+            <br>
+            <p><small class="text-gray-400">
+                温馨提示：本页面下所有图片均为本人业余时间作品，记录生活，分析美好瞬间，未经同意不得转载，爬取。本页图片未按时间顺序排列，还请谅解。
+              </small></p>
+          </div>
+        </div>
+
+        <!-- Photos -->
+        <div class="card-columns">
+          
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/jiaolou.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">故宫角楼 &amp; 2024.10.3</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/2024moon.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">2024中秋节 &amp; 2024.9.16</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/yan-tai-shan.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">福州烟台山 &amp; 2024.2.13</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/da-ku-cha.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">央视 &amp; 2023.10.02</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/jingshan.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">景山公园 &amp; 2024.10.3</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/chun-tian.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">和风含心意，春来万物生 &amp; 2024.4.5</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/2024.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">烟火向星辰，心愿皆有成 &amp; 2024.2.10</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/2023-nian-guo-qing-jie-de-tian-an-men.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">天安门 &amp; 2023.10.1</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/jrj.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">金融街 &amp; 2024.11.15</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/1719623311557.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">前门 &amp; 2024.6.29</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/yong-he-gong.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">雍和宫 &amp; 2024.2.16</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/guang-hua-lu-de-gao-lou-da-sha.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">光华路 &amp; 2023.10.2</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/sfqx.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">三坊七巷 &amp; 2025.1.28</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/2025.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">2025年 &amp; 2025.1.29</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/2025-sea.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">平潭 &amp; 2025.1.30</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          <!-- Cards -->
+          <div class="card">
+            <div class="img-container">
+              
+              <img class="card-img lazy" src ="https://hey.kegongteng.cn/post-images/img-place.jpg"
+              data-src="https://zh.yuazhi.cn/gallery/2025-fire.jpg" alt="">
+              
+            </div>
+            <div class="card-body">
+              <p class="card-text"><small class="text-gray-400">新年烟花 &amp; 2025.2.1</small></p><!-- 时间、地点什么的，随你 -->
+            </div>
+          </div>
+          
+          
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Share & Communicate<br>
+Powered by <a href="https://kegongteng.cn" target="_blank">Kegongteng</a>
+</footer>
+
+
+    <!-- Back to top -->
+    <div
+      class="fixed right-0 bottom-0 mb-6 mr-4 shadow w-12 h-12 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200"
+      @click="backToUp" v-show="scrolled">
+       <i class="ri-arrow-up-circle-fill"></i>
+    </div>
+  </div>
+
+  <script src="https://hey.kegongteng.cn/media/scripts/vue.min.js"></script>
+  <script src="https://hey.kegongteng.cn/media/scripts/main.js"></script>
+  <script src="https://hey.kegongteng.cn/media/scripts/view-image.min.js"></script>
+  <script src="https://hey.kegongteng.cn/media/scripts/lazyload.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+
+</body>
+
+</html>
